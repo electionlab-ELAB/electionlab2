@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
+    National Polling | ElectionLab
+  </title>
+<link href="styles.css?v=2028-3" rel="stylesheet"/>
+<link href="electionlab-2028.css?v=4" rel="stylesheet"/></head>
+<body class="el28-public national-page">
+<header class="topbar">
+<nav class="nav">
+<a class="brand" href="index.html">
+<span aria-hidden="true" class="el-monogram">EL<span>.</span></span>
+<span>ElectionLab</span>
+</a>
+<button aria-expanded="false" aria-label="Open navigation menu" class="menuBtn" type="button">
+        ☰
+      </button>
+<div class="navlinks"><a href="index.html">Home</a><a href="democrats.html">Democratic Primary</a><a href="republicans.html">Republican Primary</a><a href="presidential.html">2028 Presidential</a><a href="polls.html">National Polling</a><a href="approval.html">Trump Approval</a><a href="methodology.html">Methodology</a></div></nav>
+</header>
+<main class="page">
+<section class="hero el28-hero">
+<div class="heroGrid">
+<div>
+<div class="kicker">
+            National Political Environment
+          </div>
+<h1>
+            National Generic Ballot
+          </h1>
+<p>
+            ElectionLab's average of national polls asking
+            voters which party they plan to support for
+            Congress.
+          </p>
+</div>
+<div aria-hidden="true" class="el28-hero-watermark">USA</div><div class="probCard">
+<div class="bigProb" id="genericMargin">
+            —
+          </div>
+<b id="genericLeader">
+            No average yet
+          </b>
+<div id="genericPollCount">
+            Loading published polls...
+          </div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="grid2">
+<div class="card">
+<div class="kicker">
+            Democratic average
+          </div>
+<div class="bigProb" id="genericDemAverage" style="color:var(--blue)">
+            —%
+          </div>
+<p class="subtle" id="genericDemStatus">
+            Loading published polls...
+          </p>
+</div>
+<div class="card">
+<div class="kicker">
+            Republican average
+          </div>
+<div class="bigProb" id="genericRepAverage" style="color:var(--red)">
+            —%
+          </div>
+<p class="subtle" id="genericRepStatus">
+            Loading published polls...
+          </p>
+</div>
+</div>
+</section><section class="section el28-measured-trend"><div class="sectionHead"><div><div class="kicker">NATIONAL POLLING</div><h2>Recent ballot surveys</h2><p>Individual published survey results over time, not a prediction or model average.</p></div></div><article class="card"><div class="el28-line-legend"><span class="dem">● Democratic</span><span class="rep">● Republican</span></div><div aria-label="Democratic and Republican generic ballot polling over time" class="el28-trend-svg" id="el28GenericChart" role="img"><div class="el28-trend-empty">Loading published polls…</div></div><div class="subtle el28-chart-meta" id="el28GenericChartMeta"></div></article></section>
+<section class="section"><details class="el28-archive"><summary>Browse all published generic ballot polls</summary>
+<div class="sectionHead">
+<div>
+<div class="kicker">
+            National polling
+          </div>
+<h2>
+            Generic Ballot Polls
+          </h2>
+<p>
+            Published national congressional ballot polls
+            appear below.
+          </p>
+</div>
+</div>
+<div class="tableWrap">
+<table>
+<thead>
+<tr>
+<th>Pollster</th>
+<th>Dates</th>
+<th>Sample</th>
+<th>Dem</th>
+<th>Rep</th>
+<th>Margin</th>
+</tr>
+</thead>
+<tbody id="genericBallotTable">
+<tr>
+<td class="empty" colspan="6">
+                Loading generic ballot polls...
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></section>
+</main>
+<footer class="footer">
+<div>
+<b>ElectionLab</b>
+<p class="subtle">
+        Independent election forecasts and polling analysis.
+      </p>
+</div>
+<div class="subtle">
+      Polling averages express uncertainty, not certainty.
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="common.js"></script>
+<script src="public.js"></script>
+<script src="electionlab-2028.js?v=4"></script><script src="electionlab-generic-trend.js?v=4"></script></body>
+</html>

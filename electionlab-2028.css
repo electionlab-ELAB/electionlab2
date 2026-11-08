@@ -1,0 +1,94 @@
+
+/* ElectionLab 2.0 — calm editorial system; appended after legacy styles */
+:root{--el-ink:#10243e;--el-muted:#63748a;--el-line:#e4eaf1;--el-paper:#f5f7fa;--el-card:#fff;--el-blue:#1b5baf;--el-red:#b83343}
+html{scroll-behavior:smooth}body.el28-public{background:var(--el-paper)!important;color:var(--el-ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif}
+.el28-public .topbar{background:#10243e!important;box-shadow:none!important;border:0!important}
+.el28-public .nav{max-width:1240px!important;min-height:74px!important}
+.el28-public .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:white!important;font-weight:750;letter-spacing:-.04em;font-size:20px}
+.el-monogram{display:inline-flex;align-items:center;justify-content:center;flex:none;background:#fff;color:#112943;border-radius:10px;font-size:19px;font-weight:900;letter-spacing:-.12em;width:43px;height:43px;padding-right:3px}.el-monogram span{color:#c64a58}
+.el28-public .navlinks a{font-size:12px!important;font-weight:650!important;opacity:.82!important;white-space:nowrap}.el28-public .navlinks a:hover,.el28-public .navlinks a.active{opacity:1!important}
+.el28-public .page{max-width:1240px!important;margin:0 auto!important;padding-bottom:75px!important}
+.el28-public .hero,.el28-public .elHero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(120deg,#152d4d,#264a70)!important;color:white!important;border-radius:0 0 20px 20px!important;box-shadow:none!important;padding:65px clamp(24px,5vw,68px)!important;min-height:285px}
+.el28-public .hero:before,.el28-public .elHero:before{content:"";position:absolute;z-index:-1;right:-110px;top:-210px;width:560px;height:560px;border-radius:50%;border:85px solid rgba(255,255,255,.045)}
+.el28-public .hero h1,.el28-public .elHero h1{font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(37px,4.3vw,62px)!important;line-height:1.08!important;letter-spacing:-.035em!important;font-weight:700!important;color:#fff!important;max-width:790px;margin:13px 0 17px!important}
+.el28-public .hero h1 em,.el28-public .elHero h1 em{color:#dbe8f6;font-weight:400}
+.el28-public .hero p,.el28-public .elHero p{color:#dce6f1!important;line-height:1.65!important;max-width:650px;font-size:15px!important}
+.el28-public .kicker{font-size:11px!important;font-weight:800!important;letter-spacing:.18em!important;color:#bcd5ef!important}
+.el28-public .section{margin-top:38px!important}.el28-public .section h2,.el28-public .sectionHead h2{font-family:Georgia,serif!important;letter-spacing:-.03em!important;font-size:clamp(25px,2.7vw,35px)!important;color:#152b48!important}
+.el28-public .card,.el28-public .probCard,.el28-public .elNotice,.el28-public .elTiles>a,.el28-public .elFeature{background:#fff!important;border:1px solid var(--el-line)!important;border-radius:16px!important;box-shadow:0 6px 25px rgba(19,40,68,.035)!important;color:var(--el-ink)!important}
+.el28-public .card{padding:26px!important}.el28-public .card h2{font-size:25px!important}.el28-public .subtle{color:var(--el-muted)!important}
+.el28-public .heroGrid{position:relative;display:grid!important;grid-template-columns:minmax(0,1.7fr) minmax(250px,.8fr)!important;gap:24px;align-items:center}.el28-public .heroGrid>div:first-child{position:relative;z-index:2}
+.el28-public .probCard{position:relative;z-index:2;padding:26px!important;min-width:0}.el28-public .bigProb{color:#172c48!important;font-family:Georgia,serif!important}
+.democratic-theme.el28-public .hero{background:linear-gradient(112deg,#0c376c,#2c6fba)!important}.republican-theme.el28-public .hero{background:linear-gradient(112deg,#631c2d,#ba4050)!important}
+.democratic-theme.el28-public .partyTag{background:#d7eafa!important;color:#144f95!important}.republican-theme.el28-public .partyTag{background:#ffe5e8!important;color:#96283b!important}
+.el28-primary-portrait{position:absolute;z-index:1;right:220px;bottom:-66px;width:215px;height:265px;pointer-events:none;opacity:.82;filter:grayscale(1);display:flex;align-items:flex-end;justify-content:center}.el28-primary-portrait img{width:100%;height:100%;object-fit:contain;object-position:bottom;filter:grayscale(1) contrast(1.12) drop-shadow(0 12px 22px rgba(0,0,0,.15))}.el28-photo-empty{font-family:Georgia,serif;font-size:85px;color:#ffffff26;font-weight:800}
+.el28-hero-watermark{position:absolute;right:260px;bottom:0;font-family:Georgia,serif;font-size:100px;letter-spacing:-.08em;color:#ffffff18;font-weight:900;pointer-events:none}
+.home-page .elHero{padding-top:90px!important;padding-bottom:90px!important;min-height:390px}.el28-capitol{position:absolute;right:3%;bottom:-20px;width:40%;height:95%;opacity:.12;background:url('capitol-silhouette.svg') center bottom/contain no-repeat;pointer-events:none}.home-page .elHero h1{font-size:clamp(50px,5.6vw,78px)!important}
+.el28-public .elFeature{min-height:230px!important;padding:32px!important;transition:transform .15s ease,box-shadow .15s ease}.el28-public .elFeature:hover,.el28-public .elTiles>a:hover{transform:translateY(-2px);box-shadow:0 12px 30px #142c4817!important}.el28-public .elFeature.dem{border-top:5px solid #2d6cbb!important}.el28-public .elFeature.rep{border-top:5px solid #b6384b!important}.el28-public .elFeature h2{font-family:Georgia,serif!important}.el28-public .elFeature p{color:#64748b!important}
+.el28-public .elTiles>a{padding:28px!important}.el28-public .elTiles h3{font-family:Georgia,serif!important;font-size:25px!important}.el28-public .elBanner{border-radius:18px!important}
+.el28-public .trackerCandidateRow{padding:15px 0!important;border-bottom:1px solid #e9edf3!important;gap:12px}.el28-public .trackerCandidateRow>b,.el28-public .trackerCandidateRow strong{font-variant-numeric:tabular-nums}
+.el28-candidate-avatar{width:40px;height:40px;border-radius:50%;background:#e9edf2;color:#253a54;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;overflow:hidden;flex:none;vertical-align:middle;margin-right:9px}.el28-candidate-avatar img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.el28-public .footer{background:#12263f!important;color:#d5dfeb!important}
+.el28-pill{display:inline-block;border:1px solid #ffffff55;border-radius:40px;padding:8px 13px;color:#e5eef8;font-size:11px;font-weight:750;letter-spacing:.1em;margin-top:15px}
+.el28-hero-visual{display:flex;justify-content:center}.el28-seal{height:205px;width:205px;border:2px solid #ffffff60;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:Georgia,serif;font-size:74px;letter-spacing:-.05em;color:white;background:#ffffff10}.el28-seal span{font-family:system-ui,sans-serif;font-size:9px;letter-spacing:.13em;margin-top:4px}
+.el28-content{padding:0 10px}.el28-section-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:22px}.el28-section-heading p{color:var(--el-muted)}.el28-status{background:#e7edf5;color:#35506d;border-radius:30px;padding:8px 13px;font-size:12px}
+.el28-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:22px}.el28-toolbar label{font-weight:700;font-size:12px}.el28-toolbar select{background:#fff;border:1px solid #dce5ef;border-radius:9px;padding:12px;min-width:175px;color:#1d344e}
+.el28-split{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:24px}.el28-panel{background:#fff;border:1px solid var(--el-line);border-radius:17px;padding:29px;box-shadow:0 5px 22px #132a4310}.el28-panel-label{font-size:11px;font-weight:850;letter-spacing:.14em;color:#667a90;margin-bottom:22px}.el28-panel h3{font-family:Georgia,serif;font-size:27px;margin:0 0 12px}.el28-panel p{color:#66768b;line-height:1.6}.el28-versus{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px}.el28-versus>div{display:flex;flex-direction:column;gap:9px}.el28-versus strong{font-size:clamp(32px,4vw,53px);font-family:Georgia,serif}.el28-versus small{color:#697c91;font-size:12px}.el28-party{font-size:10px;font-weight:850;letter-spacing:.1em}.el28-party.dem{color:#1e63b3}.el28-party.rep{color:#b5374b}.el28-vs{color:#9ba8b9;font-weight:850;font-size:12px}.el28-small{font-size:12px!important;margin-top:20px}.el28-forecast-placeholder{margin-top:25px;border-radius:11px;background:#f0f4f9;padding:19px;font-family:Georgia,serif;font-size:35px}.el28-forecast-placeholder span{font:12px system-ui;color:#6e8095}
+.el28-poll-panel{margin-top:22px}.el28-table-scroll{overflow:auto}.el28-table{width:100%;border-collapse:collapse;min-width:650px}.el28-table th{text-align:left;font-size:11px;letter-spacing:.08em;color:#66778d;border-bottom:1px solid #dfe7ef;padding:14px 10px}.el28-table td{padding:16px 10px;border-bottom:1px solid #e9edf3;font-size:13px}.el28-table td:nth-last-child(2){color:#2868b1;font-weight:800}.el28-table td:last-child{color:#b83a4c;font-weight:800}
+@media(max-width:1050px){.el28-primary-portrait{right:140px;width:150px}.el28-public .navlinks a{font-size:11px!important}}
+@media(max-width:780px){.el28-public .heroGrid{grid-template-columns:1fr!important}.el28-public .hero,.el28-public .elHero{padding:40px 24px!important}.el28-primary-portrait,.el28-hero-watermark{display:none}.el28-split{grid-template-columns:1fr}.el28-capitol{width:80%;opacity:.08}.el28-section-heading{display:block}.el28-public .navlinks{background:#10243e!important}.el28-public .probCard{max-width:100%}.el28-hero-visual{display:none}}
+
+/* ElectionLab 2.0 editorial design, version 4 */
+.el28-public .navlinks a[aria-current="page"]{opacity:1!important;color:#fff!important;border-bottom:2px solid #c4d5eb}
+.el28-public .elHero,.el28-public .hero{border-bottom:1px solid #ffffff1a}
+.el28-public .heroGrid{min-height:220px}
+.el28-public .card,.el28-public .el28-panel{box-shadow:0 4px 20px rgba(14,35,63,.04)!important}
+.el28-public .hero p{max-width:610px}
+.el28-public .sectionHead>div>p{max-width:690px}
+.el28-public .sectionHead{margin-bottom:17px!important}
+.el28-public .trackerCandidateRow{background:transparent!important}
+.el28-public .trackerCandidateRow>div:first-child{display:flex;align-items:center;gap:11px;min-width:0}
+.el28-public .trackerCandidateRow strong{margin-left:auto}
+.el28-public .trackerCandidateRow .el28-candidate-avatar{margin:0}
+.el28-public .trackerCandidateRow .partyDot{display:none}
+.el28-public .pollingChartWrap{height:min(370px,50vw)!important}
+.el28-public .el28-archive{border:1px solid #dfe7ef;border-radius:15px;background:white;box-shadow:0 3px 17px #132d4e08;overflow:hidden}
+.el28-public .el28-archive>summary{list-style:none;padding:21px 24px;font-weight:750;cursor:pointer;position:relative;color:#203754}
+.el28-public .el28-archive>summary::-webkit-details-marker{display:none}
+.el28-public .el28-archive>summary:after{content:'+';position:absolute;right:24px;top:17px;color:#66849f;font-size:24px;font-weight:450}
+.el28-public .el28-archive[open]>summary:after{content:'–'}
+.el28-public .el28-archive[open]>.sectionHead,.el28-public .el28-archive[open]>.tableWrap{margin:20px 24px}
+.el28-public .el28-archive .sectionHead h2{font-size:22px!important}
+.el28-public .el28-method-note .card{border-left:4px solid #d8e5f4!important}
+.el28-public .el28-method-note h2{font-size:21px!important}
+.el28-public .el28-method-note p{font-size:13px}
+.el28-feature-cards{position:relative}
+.el28-public .elFeature{isolation:isolate;overflow:hidden;position:relative;min-height:245px!important}
+.el28-public .elFeature>*:not(.el28-feature-photo){position:relative;z-index:2;max-width:66%}
+.el28-public .elFeature h2{font-size:clamp(23px,2.4vw,29px)!important}
+.el28-feature-photo{position:absolute;z-index:1;right:-25px;bottom:-60px;height:250px;width:210px;object-fit:cover;object-position:center top;filter:grayscale(1) contrast(1.15);opacity:.40;mix-blend-mode:multiply;mask-image:linear-gradient(90deg,transparent 0%,black 29%),linear-gradient(to bottom,black 65%,transparent 100%);mask-composite:intersect}
+.el28-public .elFeature.dem{background:linear-gradient(105deg,#fff,#f0f5fc)!important}.el28-public .elFeature.rep{background:linear-gradient(105deg,#fff,#fff1f1)!important}
+.el28-photo-disclaimer{color:#8390a1;font-size:11px;margin:11px 2px}
+.republican-theme.el28-public .hero{background:linear-gradient(112deg,#641a2d 4%,#a73345 95%)!important}
+.democratic-theme.el28-public .hero{background:linear-gradient(112deg,#0d356a 4%,#2765af 95%)!important}
+.national-page.el28-public .hero{background:linear-gradient(112deg,#2b2a4b,#55517d)!important}
+.approval-page.el28-public .hero{background:linear-gradient(112deg,#132b48,#344c6d)!important}
+.presidential-page.el28-public .hero{background:linear-gradient(112deg,#102743,#303a69)!important}
+.el28-primary-portrait{right:260px!important;bottom:-64px!important;opacity:.76!important;width:260px!important;height:300px!important;overflow:visible}
+.el28-primary-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 11%;filter:grayscale(1) contrast(1.12)!important;mask-image:radial-gradient(ellipse 76% 90% at 52% 45%,black 48%,transparent 79%)}
+.el28-primary-portrait .el28-photo-caption{display:none}
+.el28-primary-portrait .el28-photo-empty{align-self:center}
+.el28-approval-photo{position:absolute;right:235px;bottom:-65px;height:310px;width:255px;opacity:.35;overflow:hidden;pointer-events:none;z-index:1}
+.el28-approval-photo img{height:100%;width:100%;object-fit:contain;object-position:bottom;filter:grayscale(1) contrast(1.1);mask-image:linear-gradient(to bottom,black 68%,transparent 100%)}
+.el28-pres-thumb{width:75px;height:75px;overflow:hidden;border-radius:50%;background:#f0f4f8;display:flex;align-items:center;justify-content:center}
+.el28-pres-thumb img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.el28-pres-chart{margin:21px 0}
+.el28-line-legend{display:flex;gap:22px;font-weight:700;font-size:12px;margin-bottom:14px}.el28-line-legend .dem{color:#2570c4}.el28-line-legend .rep{color:#c53d4b}
+.el28-trend-svg{min-height:280px;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.el28-trend-svg svg{width:100%;max-width:100%;height:auto;display:block}
+.el28-trend-empty{color:#71849a;font-size:13px;padding:50px 15px;text-align:center;border:1px dashed #d9e5ef;width:100%;border-radius:12px;background:#f8fafc}
+.el28-chart-meta{font-size:11px;color:#8593a6;margin-top:8px}
+.el28AdminPhoto{width:100%;height:100%;object-fit:cover;filter:grayscale(1);border-radius:50%}
+@media(max-width:1050px){.el28-primary-portrait{right:210px!important;width:210px!important}.el28-approval-photo{right:200px}}
+@media(max-width:800px){.el28-primary-portrait,.el28-approval-photo{display:none!important}.el28-public .elFeature>*:not(.el28-feature-photo){max-width:72%}.el28-feature-photo{height:200px;width:165px}}
+@media(max-width:580px){.el28-public .elFeature>*:not(.el28-feature-photo){max-width:79%}.el28-feature-photo{opacity:.22}.el28-public .elFeature{min-height:210px!important}.el28-public .hero h1{font-size:38px!important}.el28-public .el28-pres-thumb{width:52px;height:52px}.el28-public .el28-versus{gap:8px}}
