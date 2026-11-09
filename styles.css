@@ -3914,3 +3914,22 @@ body.primary-theme .footer {
     flex-wrap: wrap;
   }
 }
+/* Remove colored circles behind candidate photos */
+.candidate-avatar,
+.candidate-photo,
+.candidate-headshot,
+.candidate-portrait {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Keep candidate images clean */
+.candidate-avatar img,
+.candidate-photo img,
+.candidate-headshot img,
+.candidate-portrait img {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
