@@ -254,18 +254,18 @@
 </body>
 </html>
 <style>
-.el-leader-with-photo {
+.el-gop-leader-with-photo {
   display: flex !important;
   align-items: center !important;
   gap: 12px !important;
   width: fit-content;
 }
 
-.el-leader-with-photo > :first-child {
+.el-gop-leader-with-photo > :first-child {
   margin: 0 !important;
 }
 
-.el-leader-headshot {
+.el-gop-leader-headshot {
   width: 85px !important;
   height: 85px !important;
   object-fit: contain !important;
@@ -274,7 +274,7 @@
 }
 
 @media (max-width: 600px) {
-  .el-leader-headshot {
+  .el-gop-leader-headshot {
     width: 70px !important;
     height: 70px !important;
   }
@@ -283,21 +283,11 @@
 
 <script>
 (function () {
-  const candidates = [
-    "Kamala Harris",
-    "Gavin Newsom",
-    "Pete Buttigieg",
-    "Alexandria Ocasio-Cortez",
-    "Jon Ossoff",
-    "Josh Shapiro",
-    "Mark Kelly",
-    "JB Pritzker",
-    "Tim Walz",
-    "Andy Beshear",
-    "Cory Booker"
-  ];
 
-  function updateLeaderPhoto() {
+  const PHOTO_FOLDER = "candidate-heads/";
+
+  function updateRepublicanLeaderPhoto() {
+
     const elements = [...document.querySelectorAll("body *")];
 
     const label = elements.find(el =>
@@ -313,17 +303,31 @@
     let leader = null;
 
     while (box && box !== document.body) {
+
       const children = [...box.querySelectorAll("*")].filter(
-        el => el.children.length === 0
+        el => el.children.length === 0 &&
+        el.textContent.trim().length > 0
       );
 
       percentage = children.find(el =>
         /^\+\d+(\.\d+)?%$/.test(el.textContent.trim())
       );
 
-      leader = children.find(el =>
-        candidates.includes(el.textContent.trim())
-      );
+      if (percentage) {
+
+        const index = children.indexOf(percentage);
+
+        leader = children.slice(index + 1).find(el => {
+          const name = el.textContent.trim();
+
+          return (
+            /^[A-Za-z][A-Za-z\s.'’-]{2,50}$/.test(name) &&
+            name.split(/\s+/).length >= 2 &&
+            !/^(Leads|Polling|Other|Undecided)/i.test(name)
+          );
+        });
+
+      }
 
       if (percentage && leader) break;
 
@@ -336,47 +340,61 @@
 
     const slug = name
       .toLowerCase()
+      .replace(/\./g, "")
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/^-|-$/g, "");
 
-    const photoURL = "candidate-heads/" + slug + ".png";
+    const photoURL = PHOTO_FOLDER + slug + ".png";
 
     let wrapper = percentage.parentElement;
 
-    if (!wrapper.classList.contains("el-leader-with-photo")) {
+    if (!wrapper.classList.contains("el-gop-leader-with-photo")) {
+
       wrapper = document.createElement("div");
-      wrapper.className = "el-leader-with-photo";
+      wrapper.className = "el-gop-leader-with-photo";
 
       percentage.parentNode.insertBefore(wrapper, percentage);
       wrapper.appendChild(percentage);
+
     }
 
-    let photo = wrapper.querySelector(".el-leader-headshot");
+    let photo = wrapper.querySelector(".el-gop-leader-headshot");
 
     if (!photo) {
+
       photo = document.createElement("img");
-      photo.className = "el-leader-headshot";
+      photo.className = "el-gop-leader-headshot";
       photo.alt = name;
+      photo.onerror = function () {
+        this.style.display = "none";
+      };
+
       wrapper.appendChild(photo);
+
     }
 
     if (photo.getAttribute("src") !== photoURL) {
+      photo.style.display = "";
       photo.src = photoURL;
     }
 
     photo.alt = name;
+
   }
 
   let scheduled = false;
 
   const observer = new MutationObserver(() => {
+
     if (scheduled) return;
+
     scheduled = true;
 
     requestAnimationFrame(() => {
       scheduled = false;
-      updateLeaderPhoto();
+      updateRepublicanLeaderPhoto();
     });
+
   });
 
   observer.observe(document.body, {
@@ -385,6 +403,7 @@
     characterData: true
   });
 
-  updateLeaderPhoto();
+  updateRepublicanLeaderPhoto();
+
 })();
 </script>
