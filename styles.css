@@ -3933,3 +3933,22 @@ body.primary-theme .footer {
     border: none !important;
     box-shadow: none !important;
 }
+/* REMOVE RED AND BLUE CIRCLES BEHIND CANDIDATES */
+
+.primary-theme.el28-public .el28-candidate-avatar {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    width: 47px !important;
+    height: 47px !important;
+}
+
+.primary-theme.el28-public .el28-candidate-avatar img {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    object-fit: contain !important;
+}
