@@ -1,0 +1,316 @@
+
+/* ElectionLab 2.0 — calm editorial system; appended after legacy styles */
+:root{--el-ink:#10243e;--el-muted:#63748a;--el-line:#e4eaf1;--el-paper:#f5f7fa;--el-card:#fff;--el-blue:#1b5baf;--el-red:#b83343}
+html{scroll-behavior:smooth}body.el28-public{background:var(--el-paper)!important;color:var(--el-ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif}
+.el28-public .topbar{background:#10243e!important;box-shadow:none!important;border:0!important}
+.el28-public .nav{max-width:1240px!important;min-height:74px!important}
+.el28-public .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:white!important;font-weight:750;letter-spacing:-.04em;font-size:20px}
+.el-monogram{display:inline-flex;align-items:center;justify-content:center;flex:none;background:#fff;color:#112943;border-radius:10px;font-size:19px;font-weight:900;letter-spacing:-.12em;width:43px;height:43px;padding-right:3px}.el-monogram span{color:#c64a58}
+.el28-public .navlinks a{font-size:12px!important;font-weight:650!important;opacity:.82!important;white-space:nowrap}.el28-public .navlinks a:hover,.el28-public .navlinks a.active{opacity:1!important}
+.el28-public .page{max-width:1240px!important;margin:0 auto!important;padding-bottom:75px!important}
+.el28-public .hero,.el28-public .elHero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(120deg,#152d4d,#264a70)!important;color:white!important;border-radius:0 0 20px 20px!important;box-shadow:none!important;padding:65px clamp(24px,5vw,68px)!important;min-height:285px}
+.el28-public .hero:before,.el28-public .elHero:before{content:"";position:absolute;z-index:-1;right:-110px;top:-210px;width:560px;height:560px;border-radius:50%;border:85px solid rgba(255,255,255,.045)}
+.el28-public .hero h1,.el28-public .elHero h1{font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(37px,4.3vw,62px)!important;line-height:1.08!important;letter-spacing:-.035em!important;font-weight:700!important;color:#fff!important;max-width:790px;margin:13px 0 17px!important}
+.el28-public .hero h1 em,.el28-public .elHero h1 em{color:#dbe8f6;font-weight:400}
+.el28-public .hero p,.el28-public .elHero p{color:#dce6f1!important;line-height:1.65!important;max-width:650px;font-size:15px!important}
+.el28-public .kicker{font-size:11px!important;font-weight:800!important;letter-spacing:.18em!important;color:#bcd5ef!important}
+.el28-public .section{margin-top:38px!important}.el28-public .section h2,.el28-public .sectionHead h2{font-family:Georgia,serif!important;letter-spacing:-.03em!important;font-size:clamp(25px,2.7vw,35px)!important;color:#152b48!important}
+.el28-public .card,.el28-public .probCard,.el28-public .elNotice,.el28-public .elTiles>a,.el28-public .elFeature{background:#fff!important;border:1px solid var(--el-line)!important;border-radius:16px!important;box-shadow:0 6px 25px rgba(19,40,68,.035)!important;color:var(--el-ink)!important}
+.el28-public .card{padding:26px!important}.el28-public .card h2{font-size:25px!important}.el28-public .subtle{color:var(--el-muted)!important}
+.el28-public .heroGrid{position:relative;display:grid!important;grid-template-columns:minmax(0,1.7fr) minmax(250px,.8fr)!important;gap:24px;align-items:center}.el28-public .heroGrid>div:first-child{position:relative;z-index:2}
+.el28-public .probCard{position:relative;z-index:2;padding:26px!important;min-width:0}.el28-public .bigProb{color:#172c48!important;font-family:Georgia,serif!important}
+.democratic-theme.el28-public .hero{background:linear-gradient(112deg,#0c376c,#2c6fba)!important}.republican-theme.el28-public .hero{background:linear-gradient(112deg,#631c2d,#ba4050)!important}
+.democratic-theme.el28-public .partyTag{background:#d7eafa!important;color:#144f95!important}.republican-theme.el28-public .partyTag{background:#ffe5e8!important;color:#96283b!important}
+.el28-primary-portrait{position:absolute;z-index:1;right:220px;bottom:-66px;width:215px;height:265px;pointer-events:none;opacity:.82;filter:grayscale(1);display:flex;align-items:flex-end;justify-content:center}.el28-primary-portrait img{width:100%;height:100%;object-fit:contain;object-position:bottom;filter:grayscale(1) contrast(1.12) drop-shadow(0 12px 22px rgba(0,0,0,.15))}.el28-photo-empty{font-family:Georgia,serif;font-size:85px;color:#ffffff26;font-weight:800}
+.el28-hero-watermark{position:absolute;right:260px;bottom:0;font-family:Georgia,serif;font-size:100px;letter-spacing:-.08em;color:#ffffff18;font-weight:900;pointer-events:none}
+.home-page .elHero{padding-top:90px!important;padding-bottom:90px!important;min-height:390px}.el28-capitol{position:absolute;right:3%;bottom:-20px;width:40%;height:95%;opacity:.12;background:url('capitol-silhouette.svg') center bottom/contain no-repeat;pointer-events:none}.home-page .elHero h1{font-size:clamp(50px,5.6vw,78px)!important}
+.el28-public .elFeature{min-height:230px!important;padding:32px!important;transition:transform .15s ease,box-shadow .15s ease}.el28-public .elFeature:hover,.el28-public .elTiles>a:hover{transform:translateY(-2px);box-shadow:0 12px 30px #142c4817!important}.el28-public .elFeature.dem{border-top:5px solid #2d6cbb!important}.el28-public .elFeature.rep{border-top:5px solid #b6384b!important}.el28-public .elFeature h2{font-family:Georgia,serif!important}.el28-public .elFeature p{color:#64748b!important}
+.el28-public .elTiles>a{padding:28px!important}.el28-public .elTiles h3{font-family:Georgia,serif!important;font-size:25px!important}.el28-public .elBanner{border-radius:18px!important}
+.el28-public .trackerCandidateRow{padding:15px 0!important;border-bottom:1px solid #e9edf3!important;gap:12px}.el28-public .trackerCandidateRow>b,.el28-public .trackerCandidateRow strong{font-variant-numeric:tabular-nums}
+.el28-candidate-avatar{width:40px;height:40px;border-radius:50%;background:#e9edf2;color:#253a54;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;overflow:hidden;flex:none;vertical-align:middle;margin-right:9px}.el28-candidate-avatar img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.el28-public .footer{background:#12263f!important;color:#d5dfeb!important}
+.el28-pill{display:inline-block;border:1px solid #ffffff55;border-radius:40px;padding:8px 13px;color:#e5eef8;font-size:11px;font-weight:750;letter-spacing:.1em;margin-top:15px}
+.el28-hero-visual{display:flex;justify-content:center}.el28-seal{height:205px;width:205px;border:2px solid #ffffff60;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:Georgia,serif;font-size:74px;letter-spacing:-.05em;color:white;background:#ffffff10}.el28-seal span{font-family:system-ui,sans-serif;font-size:9px;letter-spacing:.13em;margin-top:4px}
+.el28-content{padding:0 10px}.el28-section-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:22px}.el28-section-heading p{color:var(--el-muted)}.el28-status{background:#e7edf5;color:#35506d;border-radius:30px;padding:8px 13px;font-size:12px}
+.el28-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:22px}.el28-toolbar label{font-weight:700;font-size:12px}.el28-toolbar select{background:#fff;border:1px solid #dce5ef;border-radius:9px;padding:12px;min-width:175px;color:#1d344e}
+.el28-split{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:24px}.el28-panel{background:#fff;border:1px solid var(--el-line);border-radius:17px;padding:29px;box-shadow:0 5px 22px #132a4310}.el28-panel-label{font-size:11px;font-weight:850;letter-spacing:.14em;color:#667a90;margin-bottom:22px}.el28-panel h3{font-family:Georgia,serif;font-size:27px;margin:0 0 12px}.el28-panel p{color:#66768b;line-height:1.6}.el28-versus{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px}.el28-versus>div{display:flex;flex-direction:column;gap:9px}.el28-versus strong{font-size:clamp(32px,4vw,53px);font-family:Georgia,serif}.el28-versus small{color:#697c91;font-size:12px}.el28-party{font-size:10px;font-weight:850;letter-spacing:.1em}.el28-party.dem{color:#1e63b3}.el28-party.rep{color:#b5374b}.el28-vs{color:#9ba8b9;font-weight:850;font-size:12px}.el28-small{font-size:12px!important;margin-top:20px}.el28-forecast-placeholder{margin-top:25px;border-radius:11px;background:#f0f4f9;padding:19px;font-family:Georgia,serif;font-size:35px}.el28-forecast-placeholder span{font:12px system-ui;color:#6e8095}
+.el28-poll-panel{margin-top:22px}.el28-table-scroll{overflow:auto}.el28-table{width:100%;border-collapse:collapse;min-width:650px}.el28-table th{text-align:left;font-size:11px;letter-spacing:.08em;color:#66778d;border-bottom:1px solid #dfe7ef;padding:14px 10px}.el28-table td{padding:16px 10px;border-bottom:1px solid #e9edf3;font-size:13px}.el28-table td:nth-last-child(2){color:#2868b1;font-weight:800}.el28-table td:last-child{color:#b83a4c;font-weight:800}
+@media(max-width:1050px){.el28-primary-portrait{right:140px;width:150px}.el28-public .navlinks a{font-size:11px!important}}
+@media(max-width:780px){.el28-public .heroGrid{grid-template-columns:1fr!important}.el28-public .hero,.el28-public .elHero{padding:40px 24px!important}.el28-primary-portrait,.el28-hero-watermark{display:none}.el28-split{grid-template-columns:1fr}.el28-capitol{width:80%;opacity:.08}.el28-section-heading{display:block}.el28-public .navlinks{background:#10243e!important}.el28-public .probCard{max-width:100%}.el28-hero-visual{display:none}}
+
+/* ElectionLab 2.0 editorial design, version 4 */
+.el28-public .navlinks a[aria-current="page"]{opacity:1!important;color:#fff!important;border-bottom:2px solid #c4d5eb}
+.el28-public .elHero,.el28-public .hero{border-bottom:1px solid #ffffff1a}
+.el28-public .heroGrid{min-height:220px}
+.el28-public .card,.el28-public .el28-panel{box-shadow:0 4px 20px rgba(14,35,63,.04)!important}
+.el28-public .hero p{max-width:610px}
+.el28-public .sectionHead>div>p{max-width:690px}
+.el28-public .sectionHead{margin-bottom:17px!important}
+.el28-public .trackerCandidateRow{background:transparent!important}
+.el28-public .trackerCandidateRow>div:first-child{display:flex;align-items:center;gap:11px;min-width:0}
+.el28-public .trackerCandidateRow strong{margin-left:auto}
+.el28-public .trackerCandidateRow .el28-candidate-avatar{margin:0}
+.el28-public .trackerCandidateRow .partyDot{display:none}
+.el28-public .pollingChartWrap{height:min(370px,50vw)!important}
+.el28-public .el28-archive{border:1px solid #dfe7ef;border-radius:15px;background:white;box-shadow:0 3px 17px #132d4e08;overflow:hidden}
+.el28-public .el28-archive>summary{list-style:none;padding:21px 24px;font-weight:750;cursor:pointer;position:relative;color:#203754}
+.el28-public .el28-archive>summary::-webkit-details-marker{display:none}
+.el28-public .el28-archive>summary:after{content:'+';position:absolute;right:24px;top:17px;color:#66849f;font-size:24px;font-weight:450}
+.el28-public .el28-archive[open]>summary:after{content:'–'}
+.el28-public .el28-archive[open]>.sectionHead,.el28-public .el28-archive[open]>.tableWrap{margin:20px 24px}
+.el28-public .el28-archive .sectionHead h2{font-size:22px!important}
+.el28-public .el28-method-note .card{border-left:4px solid #d8e5f4!important}
+.el28-public .el28-method-note h2{font-size:21px!important}
+.el28-public .el28-method-note p{font-size:13px}
+.el28-feature-cards{position:relative}
+.el28-public .elFeature{isolation:isolate;overflow:hidden;position:relative;min-height:245px!important}
+.el28-public .elFeature>*:not(.el28-feature-photo){position:relative;z-index:2;max-width:66%}
+.el28-public .elFeature h2{font-size:clamp(23px,2.4vw,29px)!important}
+.el28-feature-photo{position:absolute;z-index:1;right:-25px;bottom:-60px;height:250px;width:210px;object-fit:cover;object-position:center top;filter:grayscale(1) contrast(1.15);opacity:.40;mix-blend-mode:multiply;mask-image:linear-gradient(90deg,transparent 0%,black 29%),linear-gradient(to bottom,black 65%,transparent 100%);mask-composite:intersect}
+.el28-public .elFeature.dem{background:linear-gradient(105deg,#fff,#f0f5fc)!important}.el28-public .elFeature.rep{background:linear-gradient(105deg,#fff,#fff1f1)!important}
+.el28-photo-disclaimer{color:#8390a1;font-size:11px;margin:11px 2px}
+.republican-theme.el28-public .hero{background:linear-gradient(112deg,#641a2d 4%,#a73345 95%)!important}
+.democratic-theme.el28-public .hero{background:linear-gradient(112deg,#0d356a 4%,#2765af 95%)!important}
+.national-page.el28-public .hero{background:linear-gradient(112deg,#2b2a4b,#55517d)!important}
+.approval-page.el28-public .hero{background:linear-gradient(112deg,#132b48,#344c6d)!important}
+.presidential-page.el28-public .hero{background:linear-gradient(112deg,#102743,#303a69)!important}
+.el28-primary-portrait{right:260px!important;bottom:-64px!important;opacity:.76!important;width:260px!important;height:300px!important;overflow:visible}
+.el28-primary-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 11%;filter:grayscale(1) contrast(1.12)!important;mask-image:radial-gradient(ellipse 76% 90% at 52% 45%,black 48%,transparent 79%)}
+.el28-primary-portrait .el28-photo-caption{display:none}
+.el28-primary-portrait .el28-photo-empty{align-self:center}
+.el28-approval-photo{position:absolute;right:235px;bottom:-65px;height:310px;width:255px;opacity:.35;overflow:hidden;pointer-events:none;z-index:1}
+.el28-approval-photo img{height:100%;width:100%;object-fit:contain;object-position:bottom;filter:grayscale(1) contrast(1.1);mask-image:linear-gradient(to bottom,black 68%,transparent 100%)}
+.el28-pres-thumb{width:75px;height:75px;overflow:hidden;border-radius:50%;background:#f0f4f8;display:flex;align-items:center;justify-content:center}
+.el28-pres-thumb img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.el28-pres-chart{margin:21px 0}
+.el28-line-legend{display:flex;gap:22px;font-weight:700;font-size:12px;margin-bottom:14px}.el28-line-legend .dem{color:#2570c4}.el28-line-legend .rep{color:#c53d4b}
+.el28-trend-svg{min-height:280px;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.el28-trend-svg svg{width:100%;max-width:100%;height:auto;display:block}
+.el28-trend-empty{color:#71849a;font-size:13px;padding:50px 15px;text-align:center;border:1px dashed #d9e5ef;width:100%;border-radius:12px;background:#f8fafc}
+.el28-chart-meta{font-size:11px;color:#8593a6;margin-top:8px}
+.el28AdminPhoto{width:100%;height:100%;object-fit:cover;filter:grayscale(1);border-radius:50%}
+@media(max-width:1050px){.el28-primary-portrait{right:210px!important;width:210px!important}.el28-approval-photo{right:200px}}
+@media(max-width:800px){.el28-primary-portrait,.el28-approval-photo{display:none!important}.el28-public .elFeature>*:not(.el28-feature-photo){max-width:72%}.el28-feature-photo{height:200px;width:165px}}
+@media(max-width:580px){.el28-public .elFeature>*:not(.el28-feature-photo){max-width:79%}.el28-feature-photo{opacity:.22}.el28-public .elFeature{min-height:210px!important}.el28-public .hero h1{font-size:38px!important}.el28-public .el28-pres-thumb{width:52px;height:52px}.el28-public .el28-versus{gap:8px}}
+
+/* ============================================================
+   ElectionLab v5 — high-impact 2028 visual refinement
+   No leader portraits or oversized decorative year numerals.
+   ============================================================ */
+:root {--el-dem:#0b53bf;--el-dem-deep:#073e92;--el-rep:#c41636;--el-rep-deep:#7b0825}
+.el28-public .page {max-width:1360px!important;padding-left:24px!important;padding-right:24px!important}
+.el28-public .nav {max-width:1360px!important}
+.el28-public .sectionHead h2 {line-height:1.14}
+
+/* Real, historically photographed Capitol, with a readable navy scrim. */
+.home-page.el28-public .elHero {
+  min-height:500px!important;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+  padding:76px clamp(28px,5.2vw,88px)!important;
+  border-radius:24px!important;
+  background-image:
+    linear-gradient(90deg,rgba(9,30,65,.97) 0%,rgba(11,38,79,.91) 37%,rgba(13,40,77,.68) 69%,rgba(11,34,72,.48) 100%),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/United_States_Capitol_-_west_front.jpg/1280px-United_States_Capitol_-_west_front.jpg')!important;
+  background-size:cover!important;background-position:center,center 44%!important;
+  box-shadow:0 18px 36px rgba(18,42,76,.12)!important;
+}
+.home-page.el28-public .elHero::before,
+.home-page.el28-public .elHero::after {display:none!important}
+.home-page.el28-public .elHero h1 {max-width:850px!important;text-shadow:0 2px 20px #061c3670}
+.home-page.el28-public .elHero p {max-width:650px!important;font-size:19px!important;color:#eff5ff!important;text-shadow:0 1px 5px #001e42}
+.home-page.el28-public .elHero .kicker {color:#c8ddfa!important}
+.home-page.el28-public .elHeroNote {color:#d5e6f8!important}
+.home-page .el28-capitol {display:none!important}
+
+/* Homepage: only the two original emblems; no leader endorsements. */
+.el28-public .el28-feature-cards {gap:22px}
+.el28-public .elFeature {min-height:286px!important;display:flex;flex-direction:column;justify-content:center;padding:36px!important}
+.el28-public .elFeature.dem {
+  background:linear-gradient(112deg,#fff 8%,#e3efff 100%)!important;
+  border:2px solid #bed7ff!important;border-top:7px solid var(--el-dem)!important;
+}
+.el28-public .elFeature.rep {
+  background:linear-gradient(112deg,#fff 8%,#ffe7eb 100%)!important;
+  border:2px solid #ffc5cf!important;border-top:7px solid var(--el-rep)!important;
+}
+.el28-public .elFeature>*:not(.el28-feature-party-mark){position:relative;z-index:2;max-width:63%}
+.el28-public .elFeature .elEyebrow{font-weight:850;letter-spacing:.14em}
+.el28-public .elFeature.dem h2 {color:#083a88!important}
+.el28-public .elFeature.rep h2 {color:#7c0c28!important}
+.el28-public .elFeature.dem strong{color:#0b53bf}
+.el28-public .elFeature.rep strong{color:#b21134}
+.el28-feature-party-mark {
+  position:absolute;right:30px;top:50%;transform:translateY(-50%);
+  width:31%;height:75%;z-index:1;object-fit:contain;object-position:center;
+  border-radius:999px;
+  filter:drop-shadow(0 15px 18px #102a491b);
+}
+.el28-public .elFeature.dem .el28-feature-party-mark {
+  width:32%;height:auto;aspect-ratio:1/1;border-radius:50%;object-fit:cover;background:#0647c7;
+  border:7px solid #fff;box-shadow:0 8px 28px rgba(10,60,140,.13)
+}
+.el28-public .elFeature.rep .el28-feature-party-mark{max-width:220px}
+
+/* Party atmosphere extends from hero and navigation through the full page. */
+.primary-theme.el28-public{
+  --party-accent:#125fce;--party-accent-dark:#064597;
+  --party-ink:#10386e;--party-line:#b7d5ff;--party-tint:#e8f2ff;
+  --party-glow:rgba(13,92,205,.14);
+  background:#eaf3ff!important;
+  background-image:linear-gradient(180deg,#d9eaff 0%,#eaf3ff 42%,#f3f8ff 100%)!important;
+}
+.primary-theme.republican-theme.el28-public{
+  --party-accent:#c7193b;--party-accent-dark:#870d2b;
+  --party-ink:#65152d;--party-line:#f1bdc8;--party-tint:#ffe7ec;
+  --party-glow:rgba(206,26,64,.14);
+  background:#fff0f3!important;
+  background-image:linear-gradient(180deg,#ffdce4 0%,#fff0f3 44%,#fff7f8 100%)!important;
+}
+.primary-theme.democratic-theme.el28-public .topbar{background:#073a87!important}
+.primary-theme.republican-theme.el28-public .topbar{background:#730923!important}
+.primary-theme.el28-public .topbar {box-shadow:0 6px 22px rgba(18,39,75,.10)!important}
+.primary-theme.el28-public .topbar .navlinks a.active {border-bottom:2px solid #fff!important}
+.primary-theme.el28-public .page{max-width:1360px!important}
+.primary-theme.el28-public .hero{
+  min-height:365px!important;
+  padding:65px clamp(25px,4.3vw,76px)!important;
+  border-radius:0 0 24px 24px!important;
+  border:0!important;
+  box-shadow:0 18px 40px #071d451d!important;
+}
+.primary-theme.democratic-theme.el28-public .hero{
+  background:radial-gradient(circle at 70% 0%,rgba(255,255,255,.18),transparent 34%),linear-gradient(117deg,#062e78 0%,#0a50b8 62%,#1a73e5 100%)!important;
+}
+.primary-theme.republican-theme.el28-public .hero{
+  background:radial-gradient(circle at 75% 0%,rgba(255,255,255,.14),transparent 35%),linear-gradient(117deg,#550d28 0%,#9f1534 61%,#d51c3e 100%)!important;
+}
+.primary-theme.el28-public .hero::before {
+  content:""!important;display:block!important;
+  position:absolute;z-index:0;pointer-events:none;
+  width:550px;height:550px;right:110px;top:-290px;
+  border:75px solid #ffffff11;border-radius:50%;
+  line-height:normal;letter-spacing:normal;
+}
+.primary-theme.el28-public .heroGrid{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.35fr) clamp(140px,16vw,220px) minmax(245px,.72fr)!important;
+  gap:clamp(16px,2vw,36px)!important;
+  align-items:center;min-height:255px;
+}
+.primary-theme.el28-public .heroGrid > div:first-child{z-index:2}
+.primary-theme.el28-public .hero h1 {font-size:clamp(39px,4.5vw,67px)!important;max-width:640px!important;margin-bottom:20px!important}
+.primary-theme.el28-public .hero p {font-size:16px!important;max-width:565px}
+.primary-theme.el28-public .hero .partyTag{background:#ffffffed!important;color:var(--party-accent-dark)!important;border:0!important;font-weight:900}
+.primary-theme.el28-public .hero .partyTag::before{background:var(--party-accent)!important;box-shadow:0 0 0 3px #afc9ff75!important}
+.el28-party-seal{
+  display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:1;
+  width:100%;max-width:220px;aspect-ratio:1/1;border-radius:50%;
+  background:rgba(255,255,255,.13);border:2px solid #ffffff5e;
+  box-shadow:0 0 0 16px #ffffff12,0 0 0 42px #ffffff09,0 16px 35px #001e3c2a;
+  padding:11px;
+}
+.el28-party-seal img{display:block;width:100%;height:100%;object-fit:contain;border-radius:50%;}
+.democratic-theme .el28-party-seal img{object-fit:cover;background:#0647c7}
+.primary-theme.el28-public .hero .probCard.el28-leader-card{
+  min-height:215px;display:flex;flex-direction:column;justify-content:center;
+  background:#fff!important;
+  border:1px solid #ffffffed!important;
+  box-shadow:0 14px 40px #161d442c!important;
+  border-radius:22px!important;
+  padding:27px 22px!important;
+  color:#152945!important;
+}
+.primary-theme.el28-public .hero .probCard.el28-leader-card .el28-leader-card-label{
+  color:#788da8;letter-spacing:.15em;font-size:11px;font-weight:850;margin-bottom:14px;
+}
+.primary-theme.el28-public .hero .probCard.el28-leader-card .bigProb,
+.primary-theme.el28-public .hero #primaryLeaderAverage{
+  color:var(--party-accent)!important;font-family:Georgia,'Times New Roman',serif!important;
+  font-size:clamp(41px,4.3vw,66px)!important;line-height:1.08!important;
+  font-weight:800;letter-spacing:-.055em;
+}
+.primary-theme.el28-public .hero #primaryLeaderName{
+  color:#102540!important;font-size:20px!important;line-height:1.3;margin-top:9px;
+}
+.primary-theme.el28-public .hero #primaryLeaderParty{
+  color:#63748b!important;font-size:12px!important;line-height:1.5;margin-top:10px;
+}
+.primary-theme.el28-public .section{margin-top:34px!important}
+.primary-theme.el28-public .section > .sectionHead {
+  padding:23px 27px;border-radius:16px;
+  background:linear-gradient(105deg,var(--party-accent-dark),var(--party-accent))!important;
+  color:white!important;
+  box-shadow:0 8px 25px var(--party-glow);
+}
+.primary-theme.el28-public .section > .sectionHead h2,
+.primary-theme.el28-public .section > .sectionHead p {color:#fff!important}
+.primary-theme.el28-public .section > .sectionHead .kicker{color:#ffffffb0!important}
+.primary-theme.el28-public .section > .sectionHead p{opacity:.88}
+.primary-theme.el28-public .section > .sectionHead .trackerTabs{background:#ffffff25!important;border-color:#ffffff75!important}
+.primary-theme.el28-public .section > .sectionHead .trackerTabs a{color:#fff!important}
+.primary-theme.el28-public .section > .sectionHead .trackerTabs a.active{background:#fff!important;color:var(--party-accent-dark)!important}
+.primary-theme.el28-public .section > .sectionHead .trackerTabs a:not(.active):hover{background:#ffffff30!important}
+.primary-theme.el28-public .card{
+  border:1px solid var(--party-line)!important;
+  border-top:5px solid var(--party-accent)!important;
+  background:#fff!important;
+  box-shadow:0 7px 28px var(--party-glow)!important;
+}
+.primary-theme.el28-public .card .kicker{color:var(--party-accent)!important}
+.primary-theme.el28-public .card h2{color:var(--party-ink)!important}
+.primary-theme.el28-public #primaryTopCandidateAverage {color:var(--party-accent)!important}
+.primary-theme.el28-public .el28-method-note .card{
+  background:linear-gradient(115deg,#fff,var(--party-tint))!important;
+  border-left:6px solid var(--party-accent)!important;
+}
+.primary-theme.el28-public .chartRangeControls button.active{background:#fff!important;color:var(--party-accent-dark)!important}
+.primary-theme.el28-public .section details.el28-archive{
+  background:#fff!important;border:1px solid var(--party-line)!important;
+  border-top:5px solid var(--party-accent)!important;
+}
+.primary-theme.el28-public details.el28-archive>summary{color:var(--party-ink)}
+.primary-theme.democratic-theme.el28-public .footer{background:#073a87!important}
+.primary-theme.republican-theme.el28-public .footer{background:#730923!important}
+.primary-theme.el28-public .trackerCandidateRow{padding:17px 0!important}
+.primary-theme.el28-public .trackerCandidateRow strong{color:var(--party-ink)!important}
+.primary-theme.el28-public .el28-candidate-avatar{
+  width:47px;height:47px;background:var(--party-tint);border:1px solid var(--party-line);color:var(--party-accent-dark);border-radius:50%;
+}
+.primary-theme.el28-public .el28-candidate-avatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;filter:none!important}
+
+@media(max-width:1100px){
+  .primary-theme.el28-public .heroGrid{grid-template-columns:minmax(0,1fr) 160px minmax(210px,.7fr)!important}
+  .el28-public .elFeature>*:not(.el28-feature-party-mark){max-width:70%}
+  .el28-feature-party-mark{right:14px;width:26%}
+}
+@media(max-width:825px){
+  .el28-public .page{padding-left:12px!important;padding-right:12px!important}
+  .home-page.el28-public .elHero{min-height:420px!important;padding:48px 28px!important}
+  .primary-theme.el28-public .heroGrid{grid-template-columns:minmax(0,1fr) 135px!important}
+  .primary-theme.el28-public .heroGrid>div:first-child{grid-column:1}
+  .primary-theme.el28-public .el28-party-seal{grid-column:2;grid-row:1;width:132px;margin:auto}
+  .primary-theme.el28-public .heroGrid>.el28-leader-card{grid-column:1 / -1;grid-row:2;min-height:170px}
+  .primary-theme.el28-public .hero .probCard.el28-leader-card .bigProb{font-size:45px!important}
+}
+@media(max-width:630px){
+  .el28-public .el28-feature-cards{grid-template-columns:1fr!important}
+  .el28-public .elFeature{min-height:205px!important;padding:27px!important}
+  .el28-public .elFeature>*:not(.el28-feature-party-mark){max-width:65%}
+  .el28-feature-party-mark{width:27%;right:12px;max-height:145px}
+  .home-page.el28-public .elHero{background-position:center,center!important}
+  .primary-theme.el28-public .hero{padding:36px 25px!important}
+  .primary-theme.el28-public .heroGrid{grid-template-columns:minmax(0,1fr) 88px!important;gap:10px!important}
+  .primary-theme.el28-public .el28-party-seal{width:78px;border-width:1px;padding:4px;box-shadow:0 0 0 7px #ffffff14}
+  .primary-theme.el28-public .hero h1{font-size:37px!important}
+  .primary-theme.el28-public .hero p{font-size:13px!important}
+  .primary-theme.el28-public .section>.sectionHead{padding:21px 18px}
+  .primary-theme.el28-public .section>.sectionHead .trackerTabs{margin-top:14px}
+  .primary-theme.el28-public .section .grid2{grid-template-columns:1fr!important}
+}
+/* Override the earlier generic feature-card child positioning specifically for emblems. */
+.el28-public .elFeature > img.el28-feature-party-mark {
+  position:absolute!important;right:30px;top:50%;transform:translateY(-50%);
+  z-index:1!important;pointer-events:none;
+}
+@media(max-width:630px){.el28-public .elFeature > img.el28-feature-party-mark{right:12px;}}
