@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
+    Donald Trump Approval Tracker | ElectionLab
+  </title>
+<meta content="Track President Donald Trump's national approval and disapproval ratings with ElectionLab's weighted polling average." name="description"/>
+<link href="styles.css?v=2028-3" rel="stylesheet"/>
+<link href="electionlab-2028.css?v=4" rel="stylesheet"/><link href="electionlab-studio.css?v=4" rel="stylesheet"/></head>
+<body class="el28-public approval-page studio studio-approval">
+<header class="topbar">
+<nav class="nav">
+<a class="brand" href="index.html">
+<span aria-hidden="true" class="el-monogram">EL<span>.</span></span>
+<span>
+          ElectionLab
+        </span>
+</a><span class="studio-nav-label">2028 ELECTION CENTER</span>
+<button aria-expanded="false" aria-label="Open navigation menu" class="menuBtn" type="button">
+        ☰
+      </button>
+<div class="navlinks"><a href="index.html">Home</a><a href="democrats.html">Democrats</a><a href="republicans.html">Republicans</a><a href="presidential.html">Presidential</a><a href="polls.html">Polling</a><a href="approval.html">Approval</a><a href="methodology.html">Methodology</a></div></nav>
+</header>
+<main class="page">
+<section class="hero el28-hero">
+<div class="heroGrid">
+<div>
+<div class="kicker">
+            National Approval Tracker
+          </div>
+<h1>
+            Donald Trump Approval
+          </h1>
+<p>
+            ElectionLab's weighted average of national polls measuring
+            President Donald Trump's job approval and disapproval.
+          </p>
+</div>
+<div aria-hidden="true" class="el28-hero-watermark">45 / 47</div><div aria-hidden="true" class="el28-approval-photo"><img alt="" loading="eager" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/January_2025_Official_Presidential_Portrait_of_Donald_J._Trump_%28Transparent_Version%29.png?width=700"/></div><div class="probCard">
+<div class="bigProb" id="approvalNet">
+            —
+          </div>
+<b>
+            Net approval
+          </b>
+<div class="raceLeaderVote" id="approvalPollCount">
+            Loading published polls…
+          </div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="grid2">
+<article class="card">
+<div class="kicker">
+            Approve
+          </div>
+<div class="bigProb" id="approvalApproveAverage" style="color:var(--blue)">
+            —%
+          </div>
+<p class="subtle" id="approvalApproveStatus">
+            Loading weighted average…
+          </p>
+</article>
+<article class="card">
+<div class="kicker">
+            Disapprove
+          </div>
+<div class="bigProb" id="approvalDisapproveAverage" style="color:var(--red)">
+            —%
+          </div>
+<p class="subtle" id="approvalDisapproveStatus">
+            Loading weighted average…
+          </p>
+</article>
+</div>
+</section>
+<section class="section">
+<article class="card">
+<div class="sectionMiniHead">
+<div>
+<div class="kicker">
+              Current Average
+            </div>
+<h2>
+              Approval balance
+            </h2>
+</div>
+<div class="pollingAverageMargin" id="approvalMarginLabel">
+            —
+          </div>
+</div>
+<div aria-label="Approval and disapproval average" class="approvalBar">
+<span id="approvalBarApprove" style="width:0%;background:var(--blue)"></span>
+<span id="approvalBarOther" style="width:100%;background:#dce5f2"></span>
+<span id="approvalBarDisapprove" style="width:0%;background:var(--red)"></span>
+</div>
+<div class="pollingBarLegend">
+<span>
+<i style="background:var(--blue)"></i>
+
+            Approve
+
+            <b id="approvalBarApproveLabel">
+              —%
+            </b>
+</span>
+<span>
+<i style="background:var(--red)"></i>
+
+            Disapprove
+
+            <b id="approvalBarDisapproveLabel">
+              —%
+            </b>
+</span>
+<span>
+<i style="background:#dce5f2"></i>
+
+            Unsure / Other
+
+            <b id="approvalBarOtherLabel">
+              —%
+            </b>
+</span>
+</div>
+<div class="pollingAverageMeta" id="approvalAverageMeta">
+          Add published national approval polls to calculate an average.
+        </div>
+</article>
+</section>
+<section class="section">
+<div class="sectionHead">
+<div>
+<div class="kicker">
+            Approval Trend
+          </div>
+<h2>
+            Running national average
+          </h2>
+<p>
+            A weighted daily average smooths out movement from individual polls.
+          </p>
+</div>
+<div class="chartRangeControls" id="approvalRangeControls">
+<button data-range="30" type="button">
+            30D
+          </button>
+<button class="active" data-range="90" type="button">
+            3M
+          </button>
+<button data-range="180" type="button">
+            6M
+          </button>
+<button data-range="all" type="button">
+            All
+          </button>
+</div>
+</div>
+<article class="card pollingChartCard">
+<div class="empty" id="approvalChartEmpty" style="display:none">
+          Add published approval polls to display the running average.
+        </div>
+<div class="pollingChartWrap" id="approvalChartWrap">
+<canvas aria-label="Donald Trump approval trend chart" id="approvalChart" role="img"></canvas>
+</div>
+<div class="pollingChartFooter">
+<div id="approvalChartLatest">
+            Latest average: —
+          </div>
+<div id="approvalChartUpdated">
+            Last updated: —
+          </div>
+</div>
+</article>
+</section>
+<section class="section"><details class="el28-archive"><summary>View underlying approval polls</summary>
+<div class="sectionHead">
+<div>
+<div class="kicker">
+            National Polling
+          </div>
+<h2>
+            Approval polls
+          </h2>
+<p>
+            Published national surveys included in ElectionLab's
+            approval average.
+          </p>
+</div>
+</div>
+<div class="tableWrap">
+<table>
+<thead>
+<tr>
+<th>
+                Pollster
+              </th>
+<th>
+                Dates
+              </th>
+<th>
+                Sample
+              </th>
+<th>
+                Population
+              </th>
+<th>
+                Approve
+              </th>
+<th>
+                Disapprove
+              </th>
+<th>
+                Net
+              </th>
+</tr>
+</thead>
+<tbody id="approvalPollTable">
+<tr>
+<td class="empty" colspan="7">
+                Loading approval polls…
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+</details></section>
+<section class="section">
+<div class="card proseCard">
+<div class="kicker">
+          About the Average
+        </div>
+<h2>
+          How ElectionLab calculates approval
+        </h2>
+<p>
+          ElectionLab gives more weight to newer polls, larger
+          samples, likely-voter surveys, and higher-quality polling
+          organizations. Older surveys gradually lose influence as
+          newer data becomes available.
+        </p>
+<p>
+          The tracker currently includes national approval polling
+          only. State-by-state approval polling is not included.
+        </p>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="footerInner">
+<div>
+<b>
+          ElectionLab
+        </b>
+<p class="subtle">
+          Independent election forecasts and polling analysis.
+        </p>
+</div>
+<div class="subtle">
+        Polling averages express uncertainty, not certainty.
+      </div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="config.js"></script>
+<script src="common.js"></script>
+<script src="public.js"></script>
+<script src="electionlab-2028.js?v=4"></script><script src="electionlab-studio.js?v=4"></script></body>
+</html>
