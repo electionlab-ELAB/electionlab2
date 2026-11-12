@@ -9,8 +9,8 @@
   </title>
 <meta content="Track the 2028 Republican presidential primary: weighted national polling averages, candidate rankings, trends, and individual published polls." name="description"/>
 <link href="styles.css?v=2028-3" rel="stylesheet"/>
-<link href="electionlab-2028.css?v=5" rel="stylesheet"/><link href="electionlab-studio.css?v=4" rel="stylesheet"/></head>
-<body class="primary-theme republican-theme el28-public studio studio-republicans">
+<link href="electionlab-2028.css?v=5" rel="stylesheet"/><link rel="stylesheet" href="electionlab-3.css?v=3"></head>
+<body class="primary-theme republican-theme el28-public">
 <header class="topbar">
 <nav class="nav">
 <a class="brand" href="index.html">
@@ -18,24 +18,30 @@
 <span>
           ElectionLab
         </span>
-</a><span class="studio-nav-label">2028 ELECTION CENTER</span>
+</a>
 <button aria-expanded="false" aria-label="Open navigation menu" class="menuBtn" type="button">
         ☰
       </button>
-<div class="navlinks"><a href="index.html">Home</a><a href="democrats.html">Democrats</a><a aria-current="page" class="active" href="republicans.html">Republicans</a><a href="presidential.html">Presidential</a><a href="polls.html">Polling</a><a href="approval.html">Approval</a><a href="methodology.html">Methodology</a></div></nav>
+<div class="navlinks"><a href="index.html">Home</a><a href="democrats.html">Democratic Primary</a><a aria-current="page" class="active" href="republicans.html">Republican Primary</a><a href="presidential.html">2028 Presidential</a><a href="polls.html">National Polling</a><a href="approval.html">Trump Approval</a><a href="methodology.html">Methodology</a></div></nav>
 </header>
 <main class="page">
-<section class="hero el28-hero studio-primary-hero">
+<section class="hero el28-hero">
 <div class="heroGrid">
 <div>
 <div class="kicker">
             The Road to 2028
           </div>
-<div class="partyTag">THE REPUBLICAN FIELD</div>
-<h1>The race for the <em>nomination.</em></h1>
-<p>Follow the field. Explore every published poll. See how national support moves over time.</p>
+<div class="partyTag">
+            Republican nomination
+          </div>
+<h1>
+            Republican Primary Polling
+          </h1>
+<p>
+            ElectionLab tracks published national polling for the 2028 republican presidential nomination contest.
+          </p>
 </div>
-<div aria-label="Republican Party emblem" class="el28-party-seal studio-seal"><img alt="Republican Party logo" src="party-republican.png"/></div><div class="probCard el28-leader-card studio-leader-panel">
+<div class="el28-party-seal" aria-label="Republican Party emblem"><img src="party-republican.png" alt="Republican Party logo"/></div><div class="probCard el28-leader-card">
 <div class="el28-leader-card-label">LEADING BY</div>
 <div class="bigProb" id="primaryLeaderAverage">
             —
@@ -48,9 +54,8 @@
           </div>
 </div>
 </div>
-</section><div class="studio-primary-rail"><span>2028 / NATIONAL PRIMARY TRACKER</span><span>LIVE DATA FROM PUBLISHED SURVEYS</span><span>SCROLL TO EXPLORE ↓</span></div>
-
-<section class="section studio-standings">
+</section>
+<section class="section">
 <div class="sectionHead">
 <div>
 <div class="kicker">
@@ -106,7 +111,8 @@
 <div class="pollingBarLegend" id="primaryAverageLegend"></div>
 </article>
 </div>
-</section><section class="section studio-trend">
+</section>
+<section class="section">
 <div class="sectionHead">
 <div>
 <div class="kicker">
@@ -135,7 +141,7 @@
           </button>
 </div>
 </div>
-<article class="card pollingChartCard studio-chart-card">
+<article class="card pollingChartCard">
 <div class="empty" id="primaryChartEmpty" style="display:none">
           Add published primary polls to display the running average.
         </div>
@@ -245,5 +251,5 @@
 <script>window.ELECTIONLAB_PRIMARY_PARTY="R";</script>
 <script src="primary.js?v=5"></script>
 <script src="electionlab-2028.js?v=5"></script>
-<script src="electionlab-studio.js?v=4"></script></body>
+</body>
 </html>
