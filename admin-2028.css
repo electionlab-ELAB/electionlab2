@@ -1,0 +1,135 @@
+/* ElectionLab 2.0 | Administrative workspace
+   Deliberately scoped to admin.html. Does not alter public pages. */
+:root { --el28-ink:#12233d; --el28-navy:#0d1e37; --el28-mute:#697990; --el28-line:#e3e9f1; --el28-bg:#f5f7fa; --el28-blue:#185cb5; --el28-red:#a92b39; --el28-radius:15px; }
+body { background:var(--el28-bg); color:var(--el28-ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+.adminTopbar { height:72px; background:#fff; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:0 38px; border-bottom:1px solid var(--el28-line); position:relative; z-index:10; }
+.elAdminBrand {display:flex;align-items:center;gap:12px;font-weight:790;font-size:21px;color:var(--el28-navy);letter-spacing:-.9px;text-decoration:none}
+.elAdminBrand small {display:block;font-size:9px;letter-spacing:2px;font-weight:780;color:#7c879a;margin-top:0}
+.elBrandIcon {width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--el28-navy);color:#fff;border-radius:11px;font-size:19px;letter-spacing:-2px}
+.elBrandDot{color:#eb7980}
+.adminTopActions{display:flex;align-items:center;gap:18px;font-size:12px;font-weight:700}
+.elTopLive {color:#526579;border-right:1px solid #e0e7ed;padding-right:18px;display:flex;align-items:center;gap:7px}
+.elTopLive span,.elAccountPulse {width:7px;height:7px;border-radius:50%;background:#2ba67b;display:inline-block;box-shadow:0 0 0 4px #e4f6ed}
+.elTopPublic {color:#263e58;text-decoration:none}.elTopPublic:hover{color:var(--el28-blue)}
+.elTopLogout{border:1px solid #dbe1e8;padding:10px 14px;border-radius:9px;background:#fff;font-weight:730;color:#35475c;cursor:pointer}.elTopLogout:hover{background:#f4f7fa}
+.adminLayout {display:grid;grid-template-columns:245px minmax(0,1fr);min-height:calc(100vh - 72px);}
+.sidebar.el28Sidebar {background:#101f36;display:flex;flex-direction:column;gap:0;padding:29px 14px 20px;color:#b3bed0;}
+.elSideHeading{font-size:10px;letter-spacing:2px;font-weight:850;color:#7b8da6;padding:0 14px 14px;display:flex;justify-content:space-between;align-items:center}
+.elSideHeading span{font-size:10px;letter-spacing:0;background:#203451;padding:4px 8px;border-radius:5px;color:#a9c0e5}
+.el28Sidebar nav{display:flex;flex-direction:column;gap:3px}
+.el28Sidebar .elSideGroup {font-size:9px;font-weight:830;letter-spacing:1.65px;color:#70839e;margin:20px 0 9px;padding:0 14px}
+.el28Sidebar button[data-panel]{display:flex;align-items:center;gap:11px;color:#bbc8da;padding:12px 14px;font-size:12.5px;font-weight:670;background:transparent;border:0;border-radius:9px;margin:0;text-align:left;white-space:nowrap}
+.el28Sidebar button[data-panel]:hover{background:#1b314f;color:#fff}
+.el28Sidebar button[data-panel].active{background:#2b4365;color:#fff;box-shadow:inset 3px 0 0 #a8c6ed}
+.elSideIcon {font-size:16px;line-height:1;font-weight:600;width:17px;color:#9caec6;text-align:center;flex:0 0 17px}
+.elBlueIcon{color:#5da8ff}.elRedIcon{color:#eb6a79}
+.elSideFoot{margin-top:auto;display:flex;gap:11px;align-items:flex-start;border:1px solid #243a55;border-radius:11px;padding:13px 10px;background:#162941}
+.elSideFootIcon{width:24px;height:24px;background:#234b44;color:#70c3a0;text-align:center;line-height:24px;border-radius:8px;font-size:13px}
+.elSideFoot b{font-size:12px;display:block;color:#e0e7f0}.elSideFoot small{display:block;font-size:10.5px;line-height:1.55;color:#92a5bb;margin-top:5px}
+.adminMain{padding:33px clamp(20px,3vw,52px) 55px;min-width:0;max-width:1600px;width:100%;margin:0 auto}
+.adminHead.el28Head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:27px}
+.elBreadcrumb{font-size:10px;font-weight:800;color:#7890aa;letter-spacing:1.8px;margin-bottom:9px}.elBreadcrumb span{color:#c2cbd7;padding:0 5px}
+.el28Head h1{font-family:Georgia,'Times New Roman',serif;font-weight:650;font-size:clamp(27px,2.8vw,36px);line-height:1.15;letter-spacing:-.8px;margin:0;color:#172943}
+.el28Lead{font-size:13px;color:var(--el28-mute);margin:8px 0 0}
+.el28Account{font-size:11px;color:#8290a3;display:flex;gap:8px;align-items:center;white-space:nowrap}
+.el28Account strong{font-size:11px;color:#53657c;font-weight:780}
+.el28Welcome {display:flex;align-items:end;justify-content:space-between;gap:20px;padding:31px 34px;background:linear-gradient(108deg,#122743 0%,#183858 86%);color:white;border-radius:17px;position:relative;overflow:hidden}
+.el28Welcome::after{content:'';position:absolute;right:-80px;top:-160px;width:370px;height:370px;border:1px solid #ffffff15;border-radius:50%;box-shadow:0 0 0 60px #ffffff06,0 0 0 120px #ffffff04;pointer-events:none}
+.el28Eyebrow{font-size:10px;letter-spacing:1.9px;font-weight:850;opacity:.82;margin-bottom:12px}
+.el28Welcome h2,.el28PartyHero h2,.el28ModuleIntro h2{margin:0;font-family:Georgia,'Times New Roman',serif;font-size:clamp(27px,3vw,37px);line-height:1.16;letter-spacing:-.6px;font-weight:600;color:inherit}
+.el28Welcome p,.el28PartyHero p,.el28ModuleIntro p{font-size:13px;max-width:540px;line-height:1.6;color:#b8c9df;margin:10px 0 0}
+.el28HeroAction{position:relative;z-index:1;border:1px solid #6c89ab;border-radius:9px;background:#ffffff15;color:#fff;white-space:nowrap;font-size:12px;font-weight:700;padding:12px 15px;cursor:pointer}
+.el28HeroAction span{padding-left:22px}.el28HeroAction:hover{background:#ffffff2a}
+.el28SectionLabel{display:flex;justify-content:space-between;align-items:center;margin:32px 0 16px;gap:12px}
+.el28SectionLabel h3,.el28SectionHeading h3,.el28CardHeading h3{margin:0;color:#1d2d46;font-weight:750;font-size:16px;letter-spacing:-.2px}
+.el28SectionLabel>span{font-size:11px;color:#91a0b2}
+.el28KpiGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.el28Kpi{cursor:pointer;padding:21px 19px;text-align:left;border:1px solid var(--el28-line);border-radius:13px;background:white;min-width:0;box-shadow:0 2px 8px #10274405}
+.el28Kpi:hover{border-color:#a7b9cb;transform:translateY(-1px);box-shadow:0 8px 22px #1027440a}
+.el28KpiTop{display:flex;justify-content:space-between;align-items:start;gap:4px;font-size:9px;letter-spacing:1px;line-height:1.55;font-weight:820;color:#71849c;min-height:30px}
+.el28KpiArrow{font-size:14px;color:#a0b1c4;line-height:1}.el28Kpi strong{display:block;font-size:35px;font-weight:760;letter-spacing:-1.8px;line-height:1.25;margin-top:9px;color:#182941}
+.el28Kpi small{display:block;font-size:11px;color:#91a0b2;margin-top:4px}
+.el28KpiDem{border-top:3px solid var(--el28-blue);padding-top:19px}.el28KpiDem strong{color:#145cb3}
+.el28KpiRep{border-top:3px solid var(--el28-red);padding-top:19px}.el28KpiRep strong{color:#aa2e43}
+.el28DashboardBottom{display:grid;grid-template-columns:1.35fr 1fr;gap:18px;margin-top:25px}
+.el28Card{border:1px solid var(--el28-line);background:#fff;border-radius:15px;padding:23px 25px;min-width:0}
+.el28CardHeading{padding-bottom:17px;border-bottom:1px solid #edf1f5}.el28CardHeading p,.el28SectionHeading p{font-size:11.5px;color:#8592a5;margin:6px 0 0;line-height:1.55}
+.el28ActionRow{display:flex;align-items:center;gap:14px;width:100%;border:0;border-bottom:1px solid #eef1f5;background:transparent;text-align:left;padding:15px 0;cursor:pointer;color:#1c304a}
+.el28ActionRow:last-child{border-bottom:0;padding-bottom:0}.el28ActionRow:hover b{color:#195baa}
+.el28ActionRow>span:nth-child(2){flex:1;min-width:0}.el28ActionRow b{font-size:12.5px;font-weight:740;display:block}.el28ActionRow small{display:block;color:#9ba6b6;font-size:11px;margin-top:4px}
+.el28ActionRow strong{font-size:20px;color:#a3b3c6;font-weight:400}.el28ActionIcon{height:35px;width:35px;flex:0 0 35px;border-radius:9px;background:#edf2f8;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:750;color:#4e6b89}
+.el28DemAction{color:#1e66b6;background:#e9f2fd}.el28RepAction{color:#a92c3a;background:#fff0f2}
+.el28HealthRows{padding:16px 0}.el28HealthRow{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:12px;padding:10px 0;border-bottom:1px solid #f0f3f6}.el28HealthRow:last-child{border-bottom:0}.el28HealthLabel{color:#536981}.el28HealthStatus{font-size:11px;font-weight:750;color:#13855b}.el28HealthStatus.warning{color:#b25f25}.el28HealthStatus span{font-size:14px;vertical-align:middle}
+.el28TextButton{border:0;background:transparent;color:#195cac;font-size:12px;font-weight:750;cursor:pointer;padding:4px 0}.el28Muted{font-size:12px;color:#8d9baf}
+.el28PartyHero,.el28ModuleIntro{border-radius:17px;padding:29px 34px;position:relative;overflow:hidden;isolation:isolate}
+.el28PartyHero::after{content:'';width:250px;height:250px;border:1px solid #ffffff15;border-radius:50%;position:absolute;right:-30px;top:-120px;box-shadow:0 0 0 48px #ffffff07,0 0 0 96px #ffffff03;z-index:-1}
+.el28PartyPanel.el28Dem .el28PartyHero{background:linear-gradient(120deg,#0e3771,#1d62b4);color:white}
+.el28PartyPanel.el28Rep .el28PartyHero{background:linear-gradient(120deg,#601d32,#a6374d);color:white}
+.el28PartyHeroMeta{display:flex;gap:14px;margin-top:22px}.el28PartyHeroMeta span{font-size:11px;color:#ebf1ff;background:#ffffff19;border:1px solid #ffffff18;padding:8px 12px;border-radius:7px}.el28PartyHeroMeta strong{font-weight:850;margin-right:4px}
+.el28PanelSection{margin-top:30px}
+.el28SectionHeading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:17px}
+.el28Btn{border:0;border-radius:9px;background:#1a3556;color:#fff;padding:11px 15px;font-weight:760;font-size:12px;cursor:pointer;white-space:nowrap}.el28Btn:hover{background:#285077}
+.el28Dem .el28Btn{background:#1c63b8}.el28Dem .el28Btn:hover{background:#104e98}
+.el28Rep .el28Btn{background:#a33347}.el28Rep .el28Btn:hover{background:#842036}
+.el28TableShell{border:1px solid var(--el28-line);border-radius:14px;overflow-x:auto;background:white}
+.el28Table{border-collapse:collapse;width:100%;min-width:650px;table-layout:auto}.el28Table th{background:#fafbfd;color:#8190a5;text-transform:uppercase;letter-spacing:1px;font-size:9px;font-weight:820;text-align:left;border-bottom:1px solid #e8edf3;padding:14px 17px}.el28Table td{font-size:12px;color:#526781;vertical-align:middle;border-bottom:1px solid #eff2f5;padding:15px 17px}.el28Table tr:last-child td{border-bottom:0}
+.el28Table td:first-child{color:#20314a}.el28Table .empty{text-align:center;padding:32px 12px;color:#9aabc0}
+.el28Right{text-align:right!important}.el28Name{display:flex;align-items:center;gap:12px}.el28Avatar{display:inline-flex;justify-content:center;align-items:center;width:36px;height:36px;border-radius:9px;background:#e7f1fd;color:#1d63ac;font-size:13px;font-weight:810;flex:0 0 36px}.el28Rep .el28Avatar{background:#fff0f2;color:#9f2c42}
+.el28Name b,.el28Table td b{font-size:12px;color:#243c56;font-weight:760}.el28Name small{display:block;font-size:10px;margin-top:3px;color:#9eacbb}
+.el28Pill{font-size:10px;border-radius:999px;padding:5px 9px;background:#f1f4f8;color:#66758a;font-weight:740;white-space:nowrap}.el28Pill.published,.el28Pill.active{background:#e6f7ef;color:#137f50}.el28Pill.draft{background:#fff3df;color:#9c6d13}
+.el28IconButton{border:1px solid #e2e8ef;border-radius:8px;padding:7px 9px;background:#fff;color:#466079;font-size:11px;font-weight:700;cursor:pointer;margin-left:6px}.el28IconButton:hover{background:#f4f7fa}.el28IconButton.el28Danger{color:#b13f4b}.el28IconButton.el28Danger:hover{background:#fff1f2}
+.el28SetupHint{margin-bottom:15px;padding:12px 15px;border:1px solid #ffe5bf;background:#fff9eb;color:#91581f;font-size:12px;line-height:1.5;border-radius:9px}.el28SetupHint[hidden]{display:none!important}
+.el28ModuleIntro{background:#132846;color:#fff;margin-bottom:30px}.el28ModuleIntro h2{font-size:32px}.el28InlineCount{display:inline-block;margin-left:6px;vertical-align:middle;background:#ecf0f5;padding:3px 9px;border-radius:15px;color:#60748a;font-size:12px}
+.el28CleanPanel>.sectionHead{margin-bottom:20px}.el28CleanPanel>.sectionHead h2{font-family:Georgia,'Times New Roman',serif;font-size:27px;color:#162b47;font-weight:650}
+.el28CleanPanel>.sectionHead p{font-size:12px;max-width:610px;color:#78899f;line-height:1.6}
+.el28CleanPanel>.card,.el28CleanPanel>.tableWrap{border:1px solid var(--el28-line);border-radius:13px;background:#fff;box-shadow:none;overflow-x:auto}
+.el28CleanPanel .stat,.el28CleanPanel .modelImportSummary .stat{box-shadow:none;border:1px solid #e4eaf0;border-radius:11px;background:#fff}
+.el28ImportNotice{font-size:12px;border:1px solid #d9e7f7;background:#eff6ff;border-radius:11px;padding:15px 18px;line-height:1.6;color:#4b6683;margin-bottom:18px}
+.el28ImportNotice b{color:#183b60}
+.el28LegacyPanel{display:none!important}
+.modal .el28ModalCard{width:min(700px,96vw);max-height:91vh;overflow-y:auto}.modal .el28ModalCard .field input,.modal .el28ModalCard .field select{border:1px solid #dfe7ee;border-radius:8px;background:#fff}
+#adminMessage{position:sticky;top:0;z-index:15}
+@media(max-width:1180px){.el28KpiGrid{grid-template-columns:repeat(3,minmax(0,1fr))}.adminLayout{grid-template-columns:215px minmax(0,1fr)}.sidebar.el28Sidebar{padding-left:9px;padding-right:9px}.el28Sidebar button[data-panel]{padding:11px 10px;font-size:11.8px}}
+@media(max-width:800px){.adminTopbar{padding:0 15px;height:64px}.elTopLive,.elTopPublic{display:none}.adminLayout{display:block}.sidebar.el28Sidebar{display:block;padding:12px 12px;overflow-x:auto;position:relative}.elSideHeading,.elSideFoot,.el28Sidebar .elSideGroup{display:none}.el28Sidebar nav{display:flex;flex-direction:row;gap:5px;min-width:max-content}.el28Sidebar button[data-panel]{white-space:nowrap;padding:10px 11px}.adminMain{padding:22px 15px 48px}.el28Head .el28Account{display:none}.el28DashboardBottom{grid-template-columns:1fr}.el28KpiGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.el28Welcome{align-items:flex-start;flex-direction:column;padding:25px 23px}.el28PartyHero,.el28ModuleIntro{padding:25px 23px}}
+@media(max-width:520px){.elAdminBrand{font-size:18px}.elBrandIcon{width:34px;height:34px;font-size:16px}.el28KpiGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.el28Kpi{padding:16px 13px}.el28KpiTop{font-size:8px}.el28Kpi strong{font-size:29px}.el28SectionHeading{align-items:flex-start;flex-direction:column;gap:11px}.el28Btn{width:100%}.el28PartyHero h2,.el28ModuleIntro h2{font-size:27px}.el28Welcome h2{font-size:29px}}
+
+.el28AdminPhoto{width:100%;height:100%;object-fit:cover;filter:grayscale(1);border-radius:50%;}
+
+/* Candidate photo picker / missing-portrait treatment, v5 */
+.el28PhotoPicker{display:flex;align-items:flex-start;gap:22px;padding:19px;background:#f5f8fc;border:1px solid #dce7f3;border-radius:14px}
+.el28PhotoPreview{width:124px;height:124px;flex:0 0 124px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#deebfa;border:3px solid #fff;color:#5378ad;font-weight:900;font-size:28px;overflow:hidden;box-shadow:0 6px 25px #14355819;text-align:center}
+.el28PhotoPreview img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.el28PhotoInputs{display:flex;flex-direction:column;gap:7px;flex:1;min-width:0}
+.el28PhotoInputs label{font-size:12px;font-weight:750;color:#294867}
+.el28PhotoInputs input[type=file]{font-size:12px;background:#fff;padding:11px;border:1px dashed #b5c9de;border-radius:9px;width:100%;color:#263e5b}
+.el28PhotoInputs input[type=url]{padding:11px!important}
+.el28PhotoInputs small{font-size:11px;color:#697e96;line-height:1.5;margin-bottom:8px}
+.el28PhotoClear{border:0;background:transparent;color:#a6344b;cursor:pointer;text-align:left;padding:0;font-size:12px;font-weight:800;align-self:flex-start}
+.el28PhotoMissing{color:#c33345!important;font-weight:800}
+.el28ChoosePhoto{background:#e9f2ff!important;border-color:#bdd4f5!important;color:#175bb0!important}
+.el28Rep .el28ChoosePhoto{background:#fff0f2!important;border-color:#edc7cf!important;color:#a51a3b!important}
+.el28MissingCandidate{background:#fffaf1}
+.el28MissingCandidate .el28Avatar{background:#fff0d3}
+.el28PhotoPickerField>label{font-weight:850;margin-bottom:9px;display:block}
+@media(max-width:560px){.el28PhotoPicker{flex-direction:column}.el28PhotoPreview{width:96px;height:96px;flex-basis:96px}.el28PhotoInputs{width:100%}}
+
+/* Owner-only staff management (ElectionLab 2028 visual language) */
+#elStaffNav[hidden],.elStaffDetails[hidden],#elStaffMessage[hidden],.el28Sidebar [data-panel][hidden]{display:none!important}
+.elStaffIntro{background:#142b47;color:#fff;border-radius:17px;padding:27px 30px;margin-bottom:24px}
+.elStaffIntro h2{font:600 30px Georgia,serif;margin:0 0 10px}.elStaffIntro p{color:#afc4d9;font-size:12px;line-height:1.6;max-width:660px;margin:0}
+.elStaffGrid{display:grid;grid-template-columns:1fr;gap:20px}
+.elStaffCard{background:#fff;border:1px solid #dde7f1;border-radius:14px;padding:22px}
+.elStaffCard h3{margin:0 0 14px;color:#172d47;font-size:16px}
+.elStaffInvite{display:flex;gap:13px;align-items:flex-end;flex-wrap:wrap}
+.elStaffInput{display:flex;flex-direction:column;gap:6px;color:#586b80;font-size:11px;font-weight:700;flex:1;min-width:190px}
+.elStaffInput input{border:1px solid #d7e0e9;background:#fff;border-radius:8px;padding:10px;font-size:13px;color:#24364c}
+.elStaffAlert{padding:12px 15px;margin-bottom:17px;border-radius:9px;font-size:12px}.elStaffAlert.good{background:#e7f8ef;color:#177044}.elStaffAlert.error{background:#fff0f0;color:#a72d39}
+.elStaffTable td small{display:block;color:#8190a5;margin-top:5px}
+.elStaffRole{display:inline-block;background:#f0f4f8;color:#4f6680;padding:5px 9px;border-radius:20px;font-weight:700;font-size:11px}.elStaffRole.owner{background:#fff1d2;color:#80611b}
+.elStaffState{font-weight:750;font-size:11px}.elStaffState.on{color:#1a8253}.elStaffState.off{color:#b13f4b}.elStaffProtected{font-size:11px;color:#9cabbc}
+.elStaffEditor{background:#f5f8fc;border-radius:9px;padding:21px}.elStaffEditor h4{margin:0 0 13px;font-size:15px;color:#1b3453}
+.elStaffChecks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0}
+.elStaffCheck{font-size:12px;color:#475f7a;display:flex;align-items:center;gap:8px}.elStaffCheck input{accent-color:#183c63;width:15px;height:15px}
+.elStaffSwitch{font-weight:750;padding:9px 0}.elStaffButtons{display:flex;align-items:center;gap:11px;margin-top:10px}.elStaffTip{color:#8897a9;font-size:11px;margin:12px 0 0}
+.elStaffAuditRow{font-size:11px;color:#657991;padding:9px 0;border-bottom:1px solid #edf1f5}
+@media(max-width:850px){.elStaffChecks{grid-template-columns:1fr}}
